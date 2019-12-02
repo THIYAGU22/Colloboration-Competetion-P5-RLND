@@ -3,20 +3,25 @@
 ### LEARNING ALGORITHM:
 As a same spirit after continuing the P2 : Continous Control  I have proceeded the project with Multi Deep Determnisitic Policy Gradients(MADDPG)
 
+As MADDPG indicates itself multiple agents ! I have implemented separate 2 agents the agents which colloborates together and compete with each other accumulates many experiences by progression updating the policies responsively.
+
+In Actor-Critic Model , it is proceeded like agent's critic is always trained using the observations and gathered actions across the agents , whereas in agents actor is trained by its own observations alone.
+
+
 ### ALGO:
-<img src = "/algo.png" width="75%" align="center" alt="robotic_arms" title="maddpg algo"/>
+<img src = "/maddpg.png" width="75%" align="center" alt="maddpg_algo" title="maddpg_algo"/>
 
 ### Network Architecture:
 
 * Actor 
   * Hidden_Layer1 = state_size*2,256-> ReLu activation 
   * Hidden_Layer2 = 256,128-> ReLu activation 
-  * Output layer  = 128,4(action_size) --> TanH activation 
+  * Output layer  = 128,2(action_size) --> TanH activation 
   
 * Critic
   * Hidden_Layer1 = state_size*2,256 -> ReLu activation 
   * Hidden_Layer2 = 256+(action_size*2),128 -> ReLu activation 
-  * Output layer  = 128,action_size --> Linear
+  * Output layer  = 128,1(action_size --> Linear
 
 
 Hyperparameters      | Fine Value
