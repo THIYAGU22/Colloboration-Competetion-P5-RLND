@@ -41,6 +41,9 @@ The task is performed in the environment is an episodic and The goal is to get t
 
 After downloading place the environment file path in Tennis.ipynb notebook file
 
+
+*Step 2*: Running all the cells in the notebook will start training the model by the way you can train an RL agent to play tennis
+
 # Instructions:
 
 ### Project Archi:
